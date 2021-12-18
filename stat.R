@@ -1,34 +1,32 @@
 # Comparing two proportions
-prop.test(x=c(490,400), n=c(500,500))
+pro = prop.test(x=c(312,408), n=c(1000,1200), alternative = "less")
 # One-propotion z-test:
-prop.test(x, n, p)
+pro = prop.test(x = 273, n = 300, p = 0.95, alternative = "less")
 
-# Generate data for t-test:
-rnorm(n, mean, sd)
 
 # Two sample t-test
-(mean1-mean2)/sqrt(var1/m+var2/n)
+(93.47-96.15)/sqrt(10.24^2/68+14.61^2/80)
 # One sample t-test
-(mean - e) * sqrt(n) / s
+(449.4 - 450) * sqrt(120) / 3.8
 
 ## Interval estimation of population mean:
-xbar = mean(data)
-SE = s/sqrt(n)
-E = qt(.975, df= n-1)*SE
+xbar = 122
+SE = 4/sqrt(100)
+E = qt(.975, df= 100-1)*SE
 # SE is standard error
 xbar + c(E,-E)
 
 ## Estimation of population proportion:
-pbar = k/n
-SE = sqrt(pbar*(1-pbar)/n)
-E = qnorm(.975)*SE
+pbar = 102/400
+SE = sqrt(pbar*(1-pbar)/400)
+E = qnorm(.99)*SE
 pbar + c(-E, E) 
 
 ## Distributions
 # Poisson
 # expectation = lambda, var = lambda
 # Calculating density
-dpois(x, lambda)
+dpois(10, lambda = 12)
 # Calculating distribution:
 ppois(n, lambda = ...)
 
@@ -46,7 +44,7 @@ qnorm(p, mean = 0, sd = 1)
 # Exponential
 # E = 1/rate, V = 1/rate^2
 dexp(x, rate = 1)
-pexp(7000, rate = 1/3300, lower.tail = FALSE)
+pexp(1, rate = 4, lower.tail = T)
 
 # Covariance
 Cov = E(XY) - E(X)*E(Y)
