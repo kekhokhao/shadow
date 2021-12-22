@@ -1,13 +1,15 @@
-# Comparing two proportions
-pro = prop.test(x=c(312,408), n=c(1000,1200), alternative = "less")
+# Comparing two proportions k1/n1 and k2/n2:
+# Alternative hypothesis is k1/n1 < k2/n2
+pro = prop.test(x=c(k1,k2), n=c(n1,n2), alternative = "less")
 # One-propotion z-test:
-pro = prop.test(x = 273, n = 300, p = 0.95, alternative = "less")
+# Alternative hypothesis is k/n < p
+pro = prop.test(x = k, n = ..., p = 0.95, alternative = "less")
 
 
 # Two sample t-test
-(93.47-96.15)/sqrt(10.24^2/68+14.61^2/80)
+(mu1-mu2)/sqrt(s1^2/n1+s^2/n2)
 # One sample t-test
-(449.4 - 450) * sqrt(120) / 3.8
+(x - mu) * sqrt(n) / s
 
 ## Interval estimation of population mean:
 xbar = 122
